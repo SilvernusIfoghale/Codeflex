@@ -4,6 +4,11 @@ const btnCalculate = document.querySelector(".btnEl");
 const display = document.querySelector("#displayEl");
 
 btnCalculate.addEventListener("click", () => {
-  let sum = Number(num1.value) + Number(num2.value);
-  display.innerHTML = `The sum is: ${sum}`;
+  const result = sum(num1.value, num2.value);
+  display.innerHTML = `The sum is: ${result}`;
 });
+
+const sum = (num1, num2) => {
+  let result = Number(num1) + Number(num2);
+  return result;
+};
