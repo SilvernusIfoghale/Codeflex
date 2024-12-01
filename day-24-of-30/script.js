@@ -34,5 +34,6 @@ const fetchData = () => {
         )
         .join("");
       divContainer.innerHTML = returnedResult;
-    });
+    })
+    .catch((error) => console.log("Error: ", error.message));
 };
